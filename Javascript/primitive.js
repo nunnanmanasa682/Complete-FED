@@ -1,0 +1,12 @@
+var brand="STONEBERG";
+var price=436;
+var rating=4.5;
+var name="slime fit";
+var stock;
+var discount=true;
+console.log(brand);
+console.log(price);
+console.log(rating);
+console.log(name);
+console.log(stock);
+console.log(discount);

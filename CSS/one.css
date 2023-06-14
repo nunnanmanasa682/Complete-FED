@@ -1,0 +1,10 @@
+thead{
+    background-color:yellow;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+   image{
+ background-image: url="https://www.pinkvilla.com/files/bts_jungkook_pics.jpg";
+  }

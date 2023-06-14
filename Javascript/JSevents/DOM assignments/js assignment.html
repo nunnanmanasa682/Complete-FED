@@ -1,0 +1,57 @@
+     <html>
+    <head>
+    <script src="./event.js" type="text/javascript"></script>
+    
+    </head>
+    <body>
+        <h1>
+            OnMouseover:
+        </h1>
+        <p> mouse over to change button background color</p>
+        <button onmouseover="changecolor_over()" style="background-color:blue" id="abc">Mouse over</button>
+    
+        <h1>
+            OnMouseout:
+        </h1>
+        <p> mouse out to change button background color</p>
+        <button onmouseout="changecolor_out()" style="background-color:green" id="def">Mouse over</button>
+        
+    
+
+        <h1>
+            Onclick:
+        </h1>
+        <p> click to change button background color</p>
+        <button onclick="changecolor_click()" style="background-color:black" id="ghf">on click</button>
+     
+
+        <h1>
+            Ondblclick:
+        </h1>
+        <p> Double click to change button background color</p>
+        <button ondblclick="changecolor_dblclick()" style="background-color:gray" id="jkl">ondblclick</button>
+    
+    
+        <h1>
+            Onfocus:
+        </h1>
+        <p> click to change button background color</p>
+       
+          
+    <button onfocus="changecolor_focus()" style="background-color:azure" id="mno"> on focus</button>  
+    <h1>onblur</h1>
+    <p>change lower case to upper case onblur event</p>
+<input type="text" onblur="myFunction()"  style="background:red">
+
+<script>
+function myFunction() {
+    document.getElementById('blur').style.background="aqua";
+}
+</script>
+</body>
+</html>      
+    
+
+
+    </body>
+    </html>
