@@ -1,9 +1,9 @@
-import React,{useState} from 'react'
+import React,  { useState } from 'react'
 import { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import './Registration.css'
 const RegistrationForm = () => {
-    const [values,setvalues] = useState({
+    const [values, setvalues] = useState({
         name: "",
         email: "",
         mobilenumber: "",
@@ -55,7 +55,7 @@ const RegistrationForm = () => {
       }
 
       //validation for mobilenumber
-      if(mobilenumber === ""){
+      if(mobilenumber === "") {
         setmobileNumberErr("Enter your mobile number")
       }
   else if(mobilenumber.length < 10 || mobilenumber.length > 10){
