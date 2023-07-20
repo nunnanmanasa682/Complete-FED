@@ -20,7 +20,7 @@ const RegistrationForm = () => {
      let getData = (event) => {
         setvalues({ ...values, [event.target.name]: event.target.value})
       }
-      useEffect(() => {
+      useEffect(() =>{
         if (valid === true){
             validateForm()
         }
