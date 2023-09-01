@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even/Odd Checker</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Task One</h1>
+    <h5>Storing input textbox value into an array, displaying the separate Even Array and Odd Array using Javascript</h5>
+    <label for="numberInput">Task value*</label><br/>
+    <!-- Use type="text" to accept both numbers and alphabets -->
+    <input type="text" id="numberInput">
+    <br/> <br />
+    <button onclick="checkEvenOdd()">Submit</button>
+    <p>Even Numbers:</p>
+    <div id="evenResult"></div>
+    <p>Odd Numbers:</p>
+    <div id="oddResult"></div>
+    
+    <script>
+        function checkEvenOdd() {
+            var inputValue = document.getElementById("numberInput").value;
+            var evenResultElement = document.getElementById("evenResult");
+            var oddResultElement = document.getElementById("oddResult");
+
+            evenResultElement.textContent = ""; // Clear previous content
+            oddResultElement.textContent = ""; // Clear previous content
+
+            // Use regular expression to check if the input contains at least one digit
+            if (/\d/.test(inputValue)) {
+                var numbers = inputValue.split(/\D+/).map(Number); // Extract numbers
+                var evenNumbers = [];
+                var oddNumbers = [];
+
+                for (var i = 0; i < numbers.length; i++) {
+                    if (!isNaN(numbers[i])) {
+                        if (numbers[i] % 2 === 0) {
+                            evenNumbers.push(numbers[i]);
+                        } else {
+                            oddNumbers.push(numbers[i]);
+                        }
+                    }
+                }
+
+                if (evenNumbers.length > 0) {
+                    evenResultElement.textContent = evenNumbers.join(", ") + " are even.";
+                }
+
+                if (oddNumbers.length > 0) {
+                    oddResultElement.textContent = oddNumbers.join(", ") + " are odd.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

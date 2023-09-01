@@ -1,8 +1,44 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./one.css"></link>
-    </head>
-    <body>
-        <h1>good morining</h1>
-    </body>
+<head>
+    <title>task one</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Task One</h1>
+    <h5>Storing input textbox value into an array, displaying the separate Even Array and Odd Array using Javascript</h5>
+    <label for="numberInput">Task value*</label><br/>
+    <!-- Use type="text" to accept both numbers and alphabets -->
+    <input type="text" id="numberInput" oninput="filterInput()">
+    <br/> <br />
+    <button onclick="checkEvenOdd()">Submit</button>
+    <p id="result"></p>
+    
+    <script>
+        function filterInput() {
+            var inputElement = document.getElementById("numberInput");
+            var inputValue = inputElement.value;
+            // Remove non-numeric characters using regular expression
+            var numericValue = inputValue.replace(/[^0-9]/g, '');
+            // Set the numeric value back to the input field
+            inputElement.value = numericValue;
+        }
+
+        function checkEvenOdd() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var resultElement = document.getElementById("result");
+            
+            if (isNaN(number)) {
+                resultElement.textContent = "The Task Value field contains only numbers.";
+            } else {
+                if (number % 2 === 0) {
+                    resultElement.textContent = number + " is even.";
+                } else {
+                    resultElement.textContent = number + " is odd.";
+                }
+            }
+        }
+    </script>
+</body>
 </html>
